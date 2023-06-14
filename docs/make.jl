@@ -13,11 +13,11 @@ makedocs(;
         "Types"    => "types.md",
         "Tutorial" => "tutorial.md",
     ],
-    repo="https://github.com/Xh4H/Discord.jl/blob/{commit}{path}#L{line}",
+    repo="https://github.com/Jorvents/Discord.jl/blob/{commit}{path}#L{line}",
     sitename="Discord.jl",
-    authors="Xh4H <sindur.esl@gmail.com>, christopher-dG <chrisadegraaf@gmail.com>",
+    authors="Xh4H <sindur.esl@gmail.com>, christopher-dG <chrisadegraaf@gmail.com>, Jorvents <jorven.tsahkna@gmail.com>",
 )
 
 deploydocs(;
-    repo="github.com/Xh4H/Discord.jl",
+    repo="github.com/Jorvents/Discord.jl",
 )
