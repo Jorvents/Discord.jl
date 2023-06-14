@@ -45,7 +45,7 @@ function Base.open(c::Client; resume::Bool=false, delay::Period=Second(7))
 
     @debug "Requesting gateway URL" logkws(c; conn=undef)...
     resp = try
-        HTTP.get("$DISCORD_API/v$(c.version)/gateway")
+        HTTP.get("$DISCORD_API_TYPES/v$(c.version)/gateway")
     catch e
         kws = logkws(c; conn=undef, exception=(e, catch_backtrace()))
         @error "Getting gateway URL failed" kws...
@@ -415,6 +415,8 @@ const CLOSE_CODES = Dict(
     4012 => :INVALID_API_VERSION,
     4013 => :INVALID_INTENTS,
     4014 => :DISALLOWED_INTENTS,
+    4015 => :VOICE_SERVER_CRASHED,
+    4016 => :UNKOWN_ENCRYPTION_MODE,
 )
 
 # Deal with an error from reading a message.
